@@ -1,0 +1,22 @@
+Electricity Usage Report
+
+INPUT: 
+header record with total kilowatt hours used during month by all customers
+a number of detail records, each containing the customer number, customer name and electricity usage (in kilowatt hours) for the month
+
+PROCESSING:
+totalUsage = number in first record
+DOWHILE more records exist
+Receive he customer number, customer name and electricity usage (in kilowatt hours) for the month
+IF electricityUsage <= 200
+	amountOwning = electricityUsage * 11
+ELSE
+	amountOwning = (200 * 11) + (electricityUsage - 200) * 8
+ENDIF
+display customer number, customer name, electricity usage and the amount owing
+move to next line
+ENDDO
+display totalUsage
+
+OUTPUTS:
+display customer number, customer name, electricity usage and the amount owing, total usage in kilowatt hours for all customers
